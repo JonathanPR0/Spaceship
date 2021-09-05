@@ -1,0 +1,39 @@
+@keyframes comingLeft {
+  from {
+    transform: translateX(calc(-50vw - 100px));
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes leavingLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50vw - 100px));
+    display: flex;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes comingRight {
+  from {
+    transform: translateX(calc(50vw + 100px));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes leavingRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(50vw + 100px));
+    opacity: 0;
+    display: none;
+  }
+}

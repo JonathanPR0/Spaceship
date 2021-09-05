@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/fa6ce8c624.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>SpaceShip - Class</title>
+  </head>
+  <body>
+    <header>
+      <i class="fas fa-code"></i>
+      <h1>SpaceShip - Class</h1>
+      <i class="fas fa-bars"></i>
+    </header>
+    <main>
+      <section id="menu">
+        <h2>O que você deseja fazer?</h2>
+        <ol>
+          <li>Engatar a Nave</li>
+          <li>Imprimir Naves</li>
+          <li>Parar Programa</li>
+        </ol>
+        <input
+          type="number"
+          name="option"
+          id="option"
+          min="1"
+          max="3"
+          maxlength="1"
+        />
+        <button id="optionButton">
+          Processar <i class="fas fa-angle-double-right"></i>
+        </button>
+      </section>
+      <section id="hitch">
+        <form action="">
+          <label for="spaceship">Nome da Nave:</label>
+          <input type="text" name="spaceship" id="spaceship" />
+          <label for="crew">Quantidade de Tripulantes:</label>
+          <input type="number" name="crew" id="crew" />
+          <button id="hitchButton">
+            Engatar <i class="fas fa-angle-double-right"></i>
+          </button>
+        </form>
+      </section>
+      <section id="print">
+        <h3>Naves engatadas</h3>
+        <ul>
+          <li>
+            <span class="spaceship">Millenion Falcon</span
+            ><span class="crew">- 7 Tripulantes</span>
+            <span class="doors"> (Portas: Abertas)</span>
+          </li>
+          <li>
+            <span class="spaceship">Millenion Falcon</span
+            ><span class="crew">- 7 Tripulantes</span>
+            <span class="doors"> (Portas: Abertas)</span>
+          </li>
+          <li>
+            <span class="spaceship">Millenion Falcon</span
+            ><span class="crew">- 7 Tripulantes</span>
+            <span class="doors"> (Portas: Abertas)</span>
+          </li>
+          <li>
+            <span class="spaceship">Millenion Falcon</span
+            ><span class="crew">- 7 Tripulantes</span>
+            <span class="doors"> (Portas: Abertas)</span>
+          </li>
+          <li>
+            <span class="spaceship">Millenion Falcon</span
+            ><span class="crew">- 7 Tripulantes</span>
+            <span class="doors"> (Portas: Abertas)</span>
+          </li>
+        </ul>
+      </section>
+      <section id="message">
+        <h3><q id="quote">Faça ou não faça. A tentativa não existe.</q></h3>
+        <cite>- Yoda</cite>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

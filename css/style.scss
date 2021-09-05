@@ -1,0 +1,76 @@
+@import "./imports/variables";
+@import "./imports/sections";
+@import "./imports/animations";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Roboto Mono", monospace;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 8vh;
+  padding: 20px 2.5rem;
+  z-index: 1000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: $darkBlue;
+  color: $cian;
+  font-size: 1.2rem;
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  background: $white;
+  margin-top: 8vh;
+  justify-content: center;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    color: $darkBlue;
+  }
+}
+
+//Style Guide
+button {
+  width: 20vw;
+  padding: 0.8rem;
+  background: $red;
+  color: $white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 0.8rem;
+}
+input {
+  padding: 0.4rem;
+  margin: 1rem;
+  background: $white;
+  color: $darkBlue;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
