@@ -134,6 +134,11 @@ section#message cite {
   display: inline-block;
 }
 
+section#message button {
+  margin-top: 1.5rem;
+  background-color: #122640;
+}
+
 @-webkit-keyframes comingLeft {
   from {
     -webkit-transform: translateX(calc(-50vw - 100px));

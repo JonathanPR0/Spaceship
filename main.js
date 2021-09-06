@@ -6,6 +6,9 @@ const spaceship = document.querySelector("#spaceship");
 const crewsQuantity = document.querySelector("#crew");
 const hitchButton = document.querySelector("#hitchButton");
 const printList = document.querySelector("#print ul");
+const message = document.querySelector("#message h3 q");
+const cite = document.querySelector("#message cite");
+const phrase = document.querySelector("#phrase");
 const arraySpaceships = [];
 
 class Spaceship {
@@ -55,4 +58,20 @@ optionButton.addEventListener("click", (event) => {
     sectionHitch.classList.remove("active", "disabled");
     sectionPrint.classList.remove("active", "disabled");
   }
+});
+
+const sentenceRequest = () => {
+  fetch("./star-wars-phrases.json")
+    .then((response) => response.json())
+    .then((json) => {
+      const randomNumber = Math.floor(Math.random() * 12);
+      message.innerText = json[randomNumber].phrase;
+      cite.innerText = json[randomNumber].author;
+    });
+};
+sentenceRequest();
+
+phrase.addEventListener("click", (event) => {
+  event.preventDefault();
+  sentenceRequest();
 });
