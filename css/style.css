@@ -125,12 +125,19 @@ section#message {
   grid-column: 1/3;
 }
 
+section#message h2 {
+  color: #55c1d9;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
 section#message h3 {
   text-align: center;
 }
 
 section#message cite {
   margin-top: 0.5rem;
+  color: #0d1a26;
   display: inline-block;
 }
 

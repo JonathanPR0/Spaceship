@@ -6,7 +6,7 @@ const spaceship = document.querySelector("#spaceship");
 const crewsQuantity = document.querySelector("#crew");
 const hitchButton = document.querySelector("#hitchButton");
 const printList = document.querySelector("#print ul");
-const message = document.querySelector("#message h3 q");
+const message = document.querySelector("#quote");
 const cite = document.querySelector("#message cite");
 const phrase = document.querySelector("#phrase");
 const arraySpaceships = [];
@@ -24,12 +24,15 @@ class Spaceship {
     this.openDoors = true;
   }
 }
+
 const printSpacechips = () => {
-  arraySpaceships.forEach((element) => {
-    const li = document.createElement("li");
-    li.innerHTML = `<span class="spaceship">${element.name}</span><span class="crew">- ${element.crewsQuantity} Tripulantes</span> <span class="doors"> (Portas: Abertas)</span>`;
-    printList.appendChild(li);
-  });
+  if (printList.innerHTML === "") {
+    arraySpaceships.forEach((element) => {
+      const li = document.createElement("li");
+      li.innerHTML = `<span class="spaceship">${element.name}</span><span class="crew">- ${element.crewsQuantity} Tripulantes</span> <span class="doors"> (Portas: Abertas)</span>`;
+      printList.appendChild(li);
+    });
+  }
 };
 
 hitchButton.addEventListener("click", (event) => {
@@ -39,6 +42,9 @@ hitchButton.addEventListener("click", (event) => {
     newSpaceship.hitched();
     arraySpaceships.push(newSpaceship);
   }
+  spaceship.value = "";
+  crewsQuantity.value = "";
+  printList.innerHTML = "";
 });
 
 optionButton.addEventListener("click", (event) => {
@@ -57,6 +63,10 @@ optionButton.addEventListener("click", (event) => {
   } else if (+option.value === 3) {
     sectionHitch.classList.remove("active", "disabled");
     sectionPrint.classList.remove("active", "disabled");
+    for (let i = 0; i <= arraySpaceships.length + 1; i += 1) {
+      arraySpaceships.pop();
+    }
+    printList.innerHTML = "";
   }
 });
 
@@ -66,7 +76,7 @@ const sentenceRequest = () => {
     .then((json) => {
       const randomNumber = Math.floor(Math.random() * 12);
       message.innerText = json[randomNumber].phrase;
-      cite.innerText = json[randomNumber].author;
+      cite.innerText = `- ${json[randomNumber].author}`;
     });
 };
 sentenceRequest();

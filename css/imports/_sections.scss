@@ -78,11 +78,17 @@ section#print {
 }
 section#message {
   grid-column: 1/3;
+  h2 {
+    color: $cian;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
   h3 {
     text-align: center;
   }
   cite {
     margin-top: 0.5rem;
+    color: $darkBlue;
     display: inline-block;
   }
   button {
