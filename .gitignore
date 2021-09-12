@@ -1,4 +1,3 @@
 node_modules/
-.eslint.json
-package-lock.json
-package.json
+*.json
+!star-wars-phrases.json
